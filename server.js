@@ -2,8 +2,9 @@ const express = require('express')
 const app = express()
 const connectDB = require('./db')
 connectDB();
+require('dotenv').config();
 app.use(express.json());  //body parser middlewear
-const port = 7000
+const port = process.env.port || 6000;
 
 // model import
 const menu = require('./models/menumodel');

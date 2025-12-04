@@ -1,8 +1,9 @@
 const mongoose= require('mongoose');
-
+require('dotenv').config();
 // define the momgodb connection url
 
-const mongoUrl ='mongodb://localhost:27017/practice'
+// const mongoUrl ='mongodb://localhost:27017/practice'   // loacal mongodb compass
+const mongoUrl= process.env.db;
 
 //setup mongodb connection
 const connectDB = async()=>{
